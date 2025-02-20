@@ -6,13 +6,14 @@
 
 # Refactoring
 # 1. add prompt ==>
+# 2. check that numbers and math operator inputs are valid
 
 ######## PEDAC
 # inputs: 2 numbers, mathematical operation
 # outputs: result of mathematical operation
 
 # rules
-# assume valid numbers are entered
+# number inputs must be valid integers
 # also assume user won't input 0 as divisor
 # must be capable of +, -, *, /
 
@@ -26,9 +27,13 @@
 # Define function `prompt` with a parameter `message`
 #    `print` invocation with f-string argument combining
 #    ==> with message
+# Define function `invalid_number` with parameter `number`
+#    function has try/except statement that raises ValueError
+#    if string input cannot be converted to integer
 # Ask user to input 2 numbers.
-# If valid inputs, convert input strings to float data type, else
-#    ask user to input 2 valid numbers.
+# Check that inputs are strings that can be converted to integers
+# Continue asking user for valid input until user inputs a string
+#    that can be converted to int
 # Ask user preferred math operation: +, -, *, /
 # Use match/case statement to find math operator entered,
 #    and return result of that mathematical expression based
@@ -39,30 +44,49 @@
 def prompt(message):
     print(f'==> {message}')
 
+def invalid_number(number_str):
+    try:
+        int(number_str)
+    except ValueError:
+        return True
+    return False
+
+def string_to_int(number_str):
+    return int(number_str)
 
 prompt('Welcome to the Calculator!')
 
 prompt('Please enter 1st number:')
-num1 = float(input())
+num1 = input()
 prompt('Enter 2nd number:')
-num2 = float(input())
+num2 = input()
+
+while invalid_number(num1):
+    prompt('The number must be an integer. Try again')
+    num1 = input()
+
+while invalid_number(num2):
+    prompt("Hmmm...that isn't a valid integer. Try again")
+    num2 = input()
 
 prompt('''Pick a mathematical operation:
     1) addition
     2) subtraction
     3) multiplication
-    4) division\n  
+    4) division  
 ''')
 math_op = input()
 
 match math_op:
     case '1':  # represents addition
-        prompt(f'{num1} + {num2} = {num1 + num2}')
+        output = int(num1) + int(num2)
     case '2':  # represents subtraction
-        prompt(f'{num1} - {num2} = {num1 - num2}')
+        output = int(num1) - int(num2)
     case '3':  # represents multiplication
-        prompt(f'{num1} * {num2} = {num1 * num2}')
+        output = int(num1) * int(num2)
     case '4':  # represents division
-        prompt(f'{num1} / {num2} = {num1 / num2}')
+        output = int(num1) / int(num2)
     case _:
         prompt('Please enter one of the choices.')
+
+prompt(output)
