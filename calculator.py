@@ -25,8 +25,7 @@
 
 # algorithm
 # Define function `prompt` with a parameter `message`
-#    `print` invocation with f-string argument combining
-#    ==> with message
+#    `print` with f-string argument combining ==> with message
 # Define function `invalid_number` with parameter `number`
 #    function has try/except statement that raises ValueError
 #    if string input cannot be converted to integer
@@ -34,7 +33,9 @@
 # Check that inputs are strings that can be converted to integers
 # Continue asking user for valid input until user inputs a string
 #    that can be converted to int
-# Ask user preferred math operation: +, -, *, /
+# Ask user preferred math operation: 1) '+', 2) '-', 3) '*', 4) '/'
+# While loop that iterates as long as math operation entered is not one
+#    of the valid choices
 # Use match/case statement to find math operator entered,
 #    and return result of that mathematical expression based
 #    on the 2 numbers entered
@@ -77,6 +78,10 @@ prompt('''Pick a mathematical operation:
 ''')
 math_op = input()
 
+while math_op not in ['1', '2', '3', '4']:
+    prompt('You must choose 1, 2, 3, or 4')
+    math_op = input()
+
 match math_op:
     case '1':  # represents addition
         output = int(num1) + int(num2)
@@ -89,4 +94,4 @@ match math_op:
     case _:
         prompt('Please enter one of the choices.')
 
-prompt(output)
+prompt(f'The result is {output}')
