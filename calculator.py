@@ -13,8 +13,8 @@
 # outputs: result of mathematical operation
 
 # rules
-# number inputs must be valid integers
-# also assume user won't input 0 as divisor
+# number inputs must strings capable of being converted to integers
+# assume user won't input 0 as divisor
 # must be capable of +, -, *, /
 
 # test cases
@@ -25,14 +25,16 @@
 
 # algorithm
 # Define function `prompt` with a parameter `message`
-#    `print` with f-string argument combining ==> with message
+#    `print` with f-string argument combining ==> with interpolated message
 # Define function `invalid_number` with parameter `number`
-#    function has try/except statement that raises ValueError
+#    try/except statement catches ValueError 
 #    if string input cannot be converted to integer
+#    returns `True` if number is invalid
+#    otherwise returns `False` if number is valid
 # Ask user to input 2 numbers.
 # Check that inputs are strings that can be converted to integers
-# Continue asking user for valid input until user inputs a string
-#    that can be converted to int
+# `while` loop continues iterating until `valid_input` returns False
+#    each iteration asks user to input number
 # Ask user preferred math operation: 1) '+', 2) '-', 3) '*', 4) '/'
 # While loop that iterates as long as math operation entered is not one
 #    of the valid choices
@@ -59,12 +61,13 @@ prompt('Welcome to the Calculator!')
 
 prompt('Please enter 1st number:')
 num1 = input()
-prompt('Enter 2nd number:')
-num2 = input()
 
 while invalid_number(num1):
     prompt('The number must be an integer. Try again')
     num1 = input()
+
+prompt('Enter 2nd number:')
+num2 = input()
 
 while invalid_number(num2):
     prompt("Hmmm...that isn't a valid integer. Try again")
