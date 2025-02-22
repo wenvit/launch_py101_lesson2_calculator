@@ -91,7 +91,5 @@ match math_op:
         output = int(num1) * int(num2)
     case '4':  # represents division
         output = int(num1) / int(num2)
-    case _:
-        prompt('Please enter one of the choices.')
 
 prompt(f'The result is {output}')
