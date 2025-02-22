@@ -27,7 +27,7 @@
 # Define function `prompt` with a parameter `message`
 #    `print` with f-string argument combining ==> with interpolated message
 # Define function `invalid_number` with parameter `number`
-#    try/except statement catches ValueError 
+#    try/except statement catches ValueError
 #    if string input cannot be converted to integer
 #    returns `True` if number is invalid
 #    otherwise returns `False` if number is valid
