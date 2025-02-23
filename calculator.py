@@ -73,5 +73,5 @@ while True:
     prompt('Would you like to perform another calculation?')
     user_response = input()
 
-    if user_response not in ['y', 'Yes', 'yes']:
+    if user_response and user_response[0].lower() != 'y':
         break
