@@ -1,20 +1,5 @@
-#### Problem statement
+### Calculator with Bonus Features
 
-# Asking the user for another calculation
-
-# Currently, our calculator asks the user for two
-# numbers and an operation and then exits after displaying
-#  the result. Wouldn't it be nice if we could ask
-# the user if they wanted to perform another calculation
-# and start a new calculation when they respond with yes?
-
-# algorithm
-# Add `while True:` loop that starts before prompt to enter 1st number
-#   and encloses rest of code.
-# After printing result of calculator, ask user if they'd like
-#   perform another calculation. If user inputs `no`, break
-
-# code
 def prompt(message):
     print(f'==> {message}')
 
