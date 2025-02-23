@@ -1,46 +1,12 @@
-####### Problem statement
-# Ask the user for two numbers.
-# Ask the user for the type of operation to perform:
-# add, subtract, multiply or divide.
-# Perform the calculation and display the result
+#### Problem statement
 
-# Refactoring
-# 1. add prompt ==>
-# 2. check that numbers and math operator inputs are valid
+# Asking the user for another calculation
 
-######## PEDAC
-# inputs: 2 numbers, mathematical operation
-# outputs: result of mathematical operation
-
-# rules
-# number inputs must strings capable of being converted to integers
-# assume user won't input 0 as divisor
-# must be capable of +, -, *, /
-
-# test cases
-# positive, negative values
-
-# data structure
-# convert input strings to float
-
-# algorithm
-# Define function `prompt` with a parameter `message`
-#    `print` with f-string argument combining ==> with interpolated message
-# Define function `invalid_number` with parameter `number`
-#    try/except statement catches ValueError
-#    if string input cannot be converted to integer
-#    returns `True` if number is invalid
-#    otherwise returns `False` if number is valid
-# Ask user to input 2 numbers.
-# Check that inputs are strings that can be converted to integers
-# `while` loop continues iterating until `valid_input` returns False
-#    each iteration asks user to input number
-# Ask user preferred math operation: 1) '+', 2) '-', 3) '*', 4) '/'
-# While loop that iterates as long as math operation entered is not one
-#    of the valid choices
-# Use match/case statement to find math operator entered,
-#    and return result of that mathematical expression based
-#    on the 2 numbers entered
+# Currently, our calculator asks the user for two 
+# numbers and an operation and then exits after displaying
+#  the result. Wouldn't it be nice if we could ask 
+# the user if they wanted to perform another calculation 
+# and start a new calculation when they respond with yes?
 
 # code
 
