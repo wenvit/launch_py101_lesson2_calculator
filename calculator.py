@@ -1,4 +1,9 @@
-### Calculator with Bonus Features
+# Extracting messages in the program to a configuration file.
+
+# There are several messages sprinkled throughout the program. 
+# Can we move them into some configuration file and access them 
+# by key? That would let us manage the messages more easily, 
+# and we could even internationalize the messages.
 
 def prompt(message):
     print(f'==> {message}')
