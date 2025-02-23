@@ -1,4 +1,11 @@
-### Calculator with Bonus Features
+# Internationalization
+
+# Your calculator program is a hit, and it's being used all over the world!
+# The problem is, not everyone speaks English. You now need to
+# internationalize the messages in your calculator. You've already done the
+# hard work of extracting all the messages to a configuration file.
+# Now, all you have to do is send that configuration file to translators
+# and call the right translation in your code.
 
 import json
 
