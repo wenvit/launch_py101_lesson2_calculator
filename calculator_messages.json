@@ -1,7 +1,20 @@
 {
-    "welcome": "Welcome to the Calculator!",
-    "invalid_num": "Hmmm...that isn't a valid integer. Try again.",
-    "invalid_op": "You must choose 1, 2, 3, or 4",
-    "another": "Would you like to perform another calculation?"
-
+    "English": {
+        "welcome":     "Welcome to the Calculator!",
+        "invalid_num": "Hmmm...that isn't a valid integer. Try again.",
+        "invalid_op":  "You must choose 1, 2, 3, or 4",
+        "another":     "Would you like to perform another calculation?"
+    },
+    "Spanish": {
+        "welcome":     "Bienvenido a la calculadora!",
+        "invalid_num": "Hmmm... ese no es un número entero válido. Inténtalo de nuevo..",
+        "invalid_op":  "Debes elegir 1, 2, 3 o 4.",
+        "another":     "¿Desea realizar otro cálculo?"
+    },
+    "French": {
+        "welcome":     "Bienvenue dans la calculatrice!",
+        "invalid_num": "Hmmm... ce n'est pas un entier valide. Réessayez.",
+        "invalid_op":  "Vous devez choisir 1, 2, 3 ou 4.",
+        "another":     "Souhaitez-vous effectuer un autre calcul?"
+    }
 }
