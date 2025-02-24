@@ -1,4 +1,7 @@
-### Calculator with Bonus Features
+# Allowing Floating-Point Numbers
+
+# Currently, our calculator only handles integer inputs.
+# Let's modify it to accept floating-point numbers as well.
 
 import json
 
