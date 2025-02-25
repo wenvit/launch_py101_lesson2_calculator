@@ -1,7 +1,7 @@
 {
     "English": {
         "welcome":     "Welcome to the Calculator!",
-        "invalid_num": "Hmmm...that isn't a valid integer. Try again.",
+        "invalid_num": "Hmmm...that isn't a valid number. Try again.",
         "invalid_op":  "You must choose 1, 2, 3, or 4",
         "another":     "Would you like to perform another calculation?"
     },

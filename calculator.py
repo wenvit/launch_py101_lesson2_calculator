@@ -13,13 +13,10 @@ def prompt(message):
 
 def invalid_number(number_str):
     try:
-        int(number_str)
+        float(number_str)
     except ValueError:
         return True
     return False
-
-def string_to_int(number_str):
-    return int(number_str)
 
 prompt('''Please enter preferred language:
     English,
@@ -31,14 +28,14 @@ prompt(MESSAGES[language]['welcome'])
 
 while True:
 
-    prompt('Please enter 1st number:')
+    prompt('Please enter 1st number (int or float):')
     num1 = input()
 
     while invalid_number(num1):
         prompt(MESSAGES[language]['invalid_num'])
         num1 = input()
 
-    prompt('Enter 2nd number:')
+    prompt('Enter 2nd number (int or float):')
     num2 = input()
 
     while invalid_number(num2):
@@ -58,15 +55,15 @@ while True:
 
     match math_op:
         case '1':  # represents addition
-            output = int(num1) + int(num2)
+            output = float(num1) + float(num2)
         case '2':  # represents subtraction
-            output = int(num1) - int(num2)
+            output = float(num1) - float(num2)
         case '3':  # represents multiplication
-            output = int(num1) * int(num2)
+            output = float(num1) * float(num2)
         case '4':  # represents division
-            output = int(num1) / int(num2)
+            output = float(num1) / float(num2)
 
-    prompt(f'The result is {output}')
+    prompt(f'The result is {output:.1f}')
 
     prompt(MESSAGES[language]['another'])
     user_response = input()
